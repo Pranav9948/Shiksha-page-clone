@@ -1,5 +1,8 @@
 
 import './App.css';
+import MainFooter from './components/Footer/MainFooter';
+import MiniFooter from './components/Footer/MiniFooter';
+import SubFooter from './components/Footer/SubFooter';
 import DekstopNav from './components/Navbar/DekstopNav';
 
 import OnlineEducationModal from './components/Sections/OnlineEducationModal/OnlineEducationModal';
@@ -15,6 +18,10 @@ function App() {
           <SmallNavbar/>
 
         <SidebarMainbarLayout/>
+
+        <MiniFooter/>
+        <MainFooter/>
+        <SubFooter/>
 
 
      

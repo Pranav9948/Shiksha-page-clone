@@ -77,11 +77,17 @@ const SidebarMainbarLayout = () => {
   ];
 
   const buttonList1 = ["Bangalore", "Mumbai", "Delhi", "Pune","Button A", "Chennai", "kolkata", "Hyderabad","Maharastra", "Karnataka", "Uttar pradesh", "Punjab"];
+  const heading1='Most Preferred Location for Teaching & Education';
+  const colorz="blue-50"
 
+
+  const buttonList2 = ["certificate", "B.Ed", "D.Ed", "M.Ed","pg Diploma", "B.A", "kolkata", "B.Voc","M.P.E.D", "UG DIPLOMA", "DIPLOMA", "BTECH"];
+  const heading2='Most Preferred Courses for Teaching & Education';
+  const colorz2='lime-100'
 
 
   return (
-    <div className="flex">
+    <div className="flex"  >
       {/* Sidebar (20% width) */}
       <div className="w-1/5 min-w-min">
         <Sidebar title="Location" content={locations} />
@@ -99,9 +105,18 @@ const SidebarMainbarLayout = () => {
           ))}
         </div>
 
-          <ButtonGroup buttonList={buttonList1}/>
+          <ButtonGroup buttonList={buttonList1} heading={heading1} colorz={colorz}/>
 
           <div className="flex flex-wrap justify-evenly gap-4 mt-16">
+          {datas.map((data, index) => (
+            <Card key={index} data={data} />
+          ))}
+        </div>
+
+
+        <ButtonGroup buttonList={buttonList2} heading={heading2} colorz={colorz2}/>
+
+        <div className="flex flex-wrap justify-evenly gap-4 mt-16">
           {datas.map((data, index) => (
             <Card key={index} data={data} />
           ))}
@@ -119,6 +134,8 @@ const SidebarMainbarLayout = () => {
 
 
  </div>
+
+ 
 
 
 
